@@ -16,7 +16,7 @@ const server = http.createServer((req, res) => {
       res.writeHead(200, {
         'Content-Type': 'application/x-sh',
   'Content-Disposition': 'attachment; filename="hello.sh"',
-  'Access-Control-Allow-Origin': '*',
+  'Access-Control-Allow-Origin': 'https://poetic-kheer-7479c0.netlify.app',
   'Access-Control-Allow-Methods': 'GET, POST, PUT, DELETE, OPTIONS',
   'Access-Control-Allow-Headers': 'Content-Type, Authorization'
       });
