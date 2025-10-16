@@ -14,10 +14,11 @@ const server = http.createServer((req, res) => {
       }
 
       res.writeHead(200, {
-        'Content-Type': 'text/html',
-        'Access-Control-Allow-Origin': '*',
-        'Access-Control-Allow-Methods': 'GET, POST, PUT, DELETE, OPTIONS',
-        'Access-Control-Allow-Headers': 'Content-Type, Authorization'
+        'Content-Type': 'application/x-sh',
+  'Content-Disposition': 'attachment; filename="hello.sh"',
+  'Access-Control-Allow-Origin': '*',
+  'Access-Control-Allow-Methods': 'GET, POST, PUT, DELETE, OPTIONS',
+  'Access-Control-Allow-Headers': 'Content-Type, Authorization'
       });
       res.end(data);
     });
@@ -33,17 +34,18 @@ const server = http.createServer((req, res) => {
       }
 
       res.writeHead(200, {
-        'Content-Type': 'text/plain',
-        'Access-Control-Allow-Origin': '*',
-        'Access-Control-Allow-Methods': 'GET, POST, PUT, DELETE, OPTIONS',
-        'Access-Control-Allow-Headers': 'Content-Type, Authorization'
+     'Content-Type': 'application/x-sh',
+  'Content-Disposition': 'attachment; filename="hello.sh"',
+  'Access-Control-Allow-Origin': '*',
+  'Access-Control-Allow-Methods': 'GET, POST, PUT, DELETE, OPTIONS',
+  'Access-Control-Allow-Headers': 'Content-Type, Authorization'
       });
       res.end('Скрипт выполнен');
     });
   }
 
   else {
-    res.writeHead(404, { 'Content-Type': 'text/plain' });
+    
     res.end('Not found');
   }
 });
